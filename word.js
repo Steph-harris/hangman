@@ -16,7 +16,8 @@ function Word(wrd){
     //if(===){appear=true, checkIfLetterFound++, return checkIfLetterFound}
   }
   this.didWeFindTheWord = function(){
-
+    //checks if ALL lets [] objects are appear = true; if yes, return true
+    //lets.every(didWeFindTheWord)
   }
   this.wordRender = function(){
     var str = "";
