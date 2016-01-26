@@ -19,7 +19,7 @@ function Word(wrd){
     for (var i = 0; i < this.lets.length; i++) {
       //if(charac===guessLetter){appear=true, whatToReturn++, return whatToReturn}
       if(this.lets[i].charac === guessLetter){
-        Letter.appear = true;
+        this.lets[i].appear = true;
         whatToReturn++;
       }   
     };
@@ -33,8 +33,8 @@ function Word(wrd){
     var str = "";
     //loop over let[]
     for (var i = 0; i < this.lets.length; i++) {
-      //{call letterRender on [i], and .concat() on to str}  
-      str.concat(this.lets[i].letterRender());
+      //call letterRender on [i], and concat on to str  
+      str +=(this.lets[i].letterRender());
     };
     return str
   }

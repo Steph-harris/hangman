@@ -2,10 +2,10 @@ function Letter(let){
   this.charac = let;
   this.appear = false;
   this.letterRender = function(){
-    if(!charac){
+    if(!this.appear){
       return "_";
     }else{
-      return charac;
+      return this.charac;
     }
   }
 }

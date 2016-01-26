@@ -32,7 +32,8 @@ var game = {
         }
       }
       console.log("Guesses remaining: " + self.guessesRemaining);
-      //console.log(currentWrd.wordRender()); Check hint in assignment
+      // Check hint in assignment
+      console.log(currentWrd.wordRender()); 
 
       // if(guessesRemaining > 0 && currentWrd.found = false){
         // keepPromptingUser();
