@@ -22,11 +22,12 @@ function Word(wrd){
         Letter.appear = true;
         whatToReturn++;
       }   
-    };return whatToReturn;
+    };
+    return whatToReturn;
   }
   this.didWeFindTheWord = function(){
     //checks if ALL lets [] objects are appear = true; if yes, return true
-    //lets.every(didWeFindTheWord)
+    //this.lets.every(Letter.appear === true);
   }
   this.wordRender = function(){
     var str = "";
