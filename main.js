@@ -19,10 +19,11 @@ var game = {
     var self = this;
     prompt.get("guessLetter", function(err, result){
       console.log("The Letter or space you guessed is " + result.guessLetter);
-      //var findHowManyOfUserGuess = currentWrd.checkIfLetterFound(result.guessLetter);
+      var findHowManyOfUserGuess = currentWrd.checkIfLetterFound(result.guessLetter);
+
       //if(findHowManyOfUserGuess === 0){
           //console.log("You guessed wrong!");
-          //guessesRemaining-=;
+          self.guessesRemaining--
       //} else{
         //console.log("You guessed right!");
         //if(currentWrd.didWeFindTheWord() = true){
@@ -30,7 +31,7 @@ var game = {
             // return 1;
         // }
       // }
-      //console.log("Guesses remaining: " + guessesRemaining);
+      console.log("Guesses remaining: " + self.guessesRemaining);
       //console.log(currentWrd.wordRender()); Check hint in assignment
 
       // if(guessesRemaining > 0 && currentWrd.found = false){
