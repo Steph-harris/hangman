@@ -1,18 +1,21 @@
+debugger;
 var prompt = require("prompt");
-var Letter = require("./letter.js");
+//var Letter = require("./letter.js");
 var Word = require("./word.js");
 
 prompt.start();
 
-game{
-  wordBank: [],
+var game = {
+  wordBank: ["ferocity", "flabbergast", "blindside", "permutation", "insipid"],
   guessesRemaining: 10,
   currentWrd: null,
-  startGame: //function(wrd)
-  //new Word(random word from wordBank)
-  //new Word = currentWrd, call .getLets() on currentWrd
-  //keepPromptingUser(),
-  keepPromptingUser://function(no arg)
+  startGame: function(wrd){
+    var rand = Math.floor(Math.random() * game.wordBank.length);
+    currentWrd = new Word (game.wordBank[rand]);
+    currentWrd.getLets();
+    keepPromptingUser();
+  },
+  keepPromptingUser:  function(){}
     //var self = this;
     //prompt.get(guessLetter, function(err, result){
       //console.log("The Letter or space you guessed is " + result.guessLetter);

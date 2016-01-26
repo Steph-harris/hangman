@@ -1,4 +1,3 @@
-debugger;
 function Letter(let){
   this.charac = let;
   this.appear = false;
