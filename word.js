@@ -26,8 +26,21 @@ function Word(wrd){
     return whatToReturn;
   }
   this.didWeFindTheWord = function(){
-    //checks if ALL lets [] objects are appear = true; if yes, return true
-    //this.lets.every(Letter.appear === true);
+    //checks if ALL lets [] objects are appear === true; if yes, return true
+    //try using a for loop
+    for (var i = 0; i < this.lets.length; i++){
+      if(this.lets[i].appear !== true){
+        return false;
+      }
+    };
+      return this.found;
+    //try using .every()
+    // if(this.lets.every(function(curLet){
+    //   return curLet.appear === true;
+    // })){
+    //   this.found === true
+    // };
+    // return this.found;
   }
   this.wordRender = function(){
     var str = "";
