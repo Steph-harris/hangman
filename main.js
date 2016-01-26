@@ -13,7 +13,7 @@ var game = {
     var rand = Math.floor(Math.random() * game.wordBank.length);
     currentWrd = new Word (game.wordBank[rand]);
     currentWrd.getLets();
-    keepPromptingUser();
+    //keepPromptingUser();
   },
   keepPromptingUser:  function(){}
     //var self = this;

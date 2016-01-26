@@ -5,9 +5,13 @@ function Word(wrd){
   this.lets = [];
   this.found = false;
   this.getLets = function(){
-    //run loop w/ i =  length of word property after split{
-    //create new Letter object w/ current [i] passed in 
-    //push new object into lets [] }
+    //run loop w/ i = length of word property
+    for (var i = 0; i < wrd.length; i++) {
+      //create new Letter object w/ current [i] passed in 
+      var newLet = new Letter(wrd[i]);
+      //push new object into lets [] }
+      this.lets.push(newLet);
+    };   
   }
   this.checkIfLetterFound = function(guessLetter){
     var whatToReturn = 0;
