@@ -35,14 +35,14 @@ var game = {
       // Check hint in assignment
       console.log(currentWrd.wordRender()); 
 
-      // if(guessesRemaining > 0 && currentWrd.found = false){
-        // keepPromptingUser();
-      // } else if(guessesRemaining === 0){
-        // console.log("Game Over Bro. The word was: " + currentWrd);
-      // } else {
-            //console.log(currentWrd.wordRender());
-      // }
-     })
+      if(self.guessesRemaining > 0 && currentWrd.found === false){
+        self.keepPromptingUser();
+      } else if(self.guessesRemaining === 0){
+        console.log("Game Over Bro. The word was: " + currentWrd.word);
+      } else {
+            console.log(currentWrd.wordRender());
+      }
+    })
   }
 }
 game.startGame()
