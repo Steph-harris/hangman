@@ -15,9 +15,16 @@ function Word(wrd){
   }
   this.checkIfLetterFound = function(guessLetter){
     var whatToReturn = 0;
-    //run loop j over each object in lets[]
-    //compare charac[j] with guessLetter
-    //if(===){appear=true, checkIfLetterFound++, return checkIfLetterFound}
+    //run loop over each object in lets[]
+    for (var i = 0; i < this.lets.length; i++) {
+      console.log(this.lets[i].charac);
+      //if(charac===guessLetter){appear=true, whatToReturn++, return whatToReturn}
+      if(this.lets[i].charac === guessLetter){
+        Letter.appear = true;
+        whatToReturn++;
+        return whatToReturn;
+      }
+    };
   }
   this.didWeFindTheWord = function(){
     //checks if ALL lets [] objects are appear = true; if yes, return true

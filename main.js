@@ -13,12 +13,12 @@ var game = {
     var rand = Math.floor(Math.random() * game.wordBank.length);
     currentWrd = new Word (game.wordBank[rand]);
     currentWrd.getLets();
-    //keepPromptingUser();
+    game.keepPromptingUser();
   },
-  keepPromptingUser:  function(){}
-    //var self = this;
-    //prompt.get(guessLetter, function(err, result){
-      //console.log("The Letter or space you guessed is " + result.guessLetter);
+  keepPromptingUser: function(){
+    var self = this;
+    prompt.get("guessLetter", function(err, result){
+      console.log("The Letter or space you guessed is " + result.guessLetter);
       //var findHowManyOfUserGuess = currentWrd.checkIfLetterFound(result.guessLetter);
       //if(findHowManyOfUserGuess === 0){
           //console.log("You guessed wrong!");
@@ -40,6 +40,7 @@ var game = {
       // } else {
             //console.log(currentWrd.wordRender());
       // }
-    //})
+     })
+  }
 }
 game.startGame()
